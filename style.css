@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0e2941;
+}
+
+/*  Top Bar - contains nav bar and stuff */
+
+#top-bar {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*  Nav bar - Acad, Dev, Chill */
+
+#nav-bar {
+  width: 10%;
+  margin-left: auto;
+  margin-right: 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  background-color: #264866;
+
+  width: 40px;
+  height: 160px;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 20px;
+
+  font-size: 20px;
+  color: #43c2da;
+
+  cursor: pointer;
+
+  transition: 0.1s ;
+
+  animation: 0.5s ease-out 0s 1 loadNavItems;
+}
+
+.nav-item.active {
+  background-color: #43c2da;
+  color: #073254;
+  height: 180px;
+}
+
+.nav-item:active {
+  height: 200px;
+  padding-top: 40px;
+}
+
+.nav-item:hover {
+}
+
+@keyframes loadNavItems {
+  0% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*  Search Box */
+
+#search {
+  height: 100px;
+  margin-top: 100px;
+}
+
+.search-box {
+  width: fit-content;
+  height: fit-content;
+}
+
+.input-search {
+  height: 50px;
+  width: 400px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color: #43c2da;
+
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid #43c2da;
+
+  animation: 0.5s ease-out 0s 1 loadSearchBox;
+}
+
+@keyframes loadSearchBox {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 400px;
+  }
+}
+
+/*  Bookmarks */
